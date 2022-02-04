@@ -1,0 +1,40 @@
+[package]
+name = "black_marlin"
+version = "0.3.4"
+authors = ["Ryohei Machida <orcinus4627@gmail.com>"]
+description = "Simple, small, and extremely fast template engine for Rust. Forked from SailFish, now it's a black marlin."
+homepage = "https://github.com/vthg2themax/black_marlin"
+repository = "https://github.com/vthg2themax/black_marlin"
+readme = "../README.md"
+keywords = ["markup", "template", "html", "classic", "classic asp","easy html generation","simplet"]
+categories = ["template-engine"]
+license = "MIT"
+workspace = ".."
+edition = "2018"
+
+[features]
+default = ["derive", "perf-inline"]
+# automatically import derive macro
+derive = ["black_marlin-macros"]
+# enable json filter
+json = ["serde", "serde_json"]
+# add more #[inline] attribute
+perf-inline = []
+
+[dependencies]
+itoap = "1.0.1"
+ryu = "1.0.9"
+serde = { version = "1.0.133", optional = true }
+serde_json = { version = "1.0.74", optional = true }
+
+[dependencies.black_marlin-macros]
+path = "../black_marlin-macros"
+version = "0.3.4"
+optional = true
+
+[build-dependencies]
+version_check = "0.9.4"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

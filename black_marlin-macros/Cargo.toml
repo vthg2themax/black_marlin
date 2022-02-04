@@ -1,0 +1,35 @@
+[package]
+name = "black_marlin-macros"
+version = "0.3.4"
+authors = ["Ryohei Machida <orcinus4627@gmail.com>"]
+description = "Simple, small, and extremely fast template engine for Rust. Forked from SailFish, now it's a black marlin."
+homepage = "https://github.com/vthg2themax/black_marlin"
+repository = "https://github.com/vthg2themax/black_marlin"
+readme = "../README.md"
+keywords = ["markup", "template", "html"]
+categories = ["template-engine"]
+license = "MIT"
+workspace = ".."
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "black_marlin_macros"
+proc-macro = true
+test = false
+doctest = false
+
+[features]
+default = ["config"]
+# enable configuration file (black_marlin.yml) support
+config = ["black_marlin-compiler/config"]
+
+[dependencies]
+proc-macro2 = "1.0.36"
+
+[dependencies.black_marlin-compiler]
+path = "../black_marlin-compiler"
+version = "0.3.4"
+default-features = false
+features = ["procmacro"]

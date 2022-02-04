@@ -1,0 +1,16 @@
+[package]
+name = "integration-tests"
+version = "0.3.4"
+authors = ["Kogia-sima <orcinus4627@gmail.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+black_marlin = { path = "../../black_marlin", default-features = false, features = ["json"] }
+black_marlin-macros = { path = "../../black_marlin-macros" }
+black_marlin-compiler = { path = "../../black_marlin-compiler" }
+serde_json = "1.0.74"
+
+[dev-dependencies]
+trybuild = "1.0.54"
+pretty_assertions = "1.0.0"

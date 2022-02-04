@@ -1,7 +1,7 @@
 use actix_web::error::InternalError;
 use actix_web::http::StatusCode;
 use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer};
-use sailfish::TemplateOnce;
+use black_marlin::TemplateOnce;
 
 #[derive(TemplateOnce)]
 #[template(path = "actix.stpl")]

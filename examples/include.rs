@@ -1,4 +1,4 @@
-use sailfish::TemplateOnce;
+use black_marlin::TemplateOnce;
 
 #[derive(TemplateOnce)]
 #[template(path = "include.stpl")]

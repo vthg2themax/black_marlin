@@ -1,11 +1,11 @@
 [workspace]
 members = [
-  "sailfish",
-  "sailfish-compiler",
-  "sailfish-macros",
-  "sailfish-tests/integration-tests"
+  "black_marlin",
+  "black_marlin-compiler",
+  "black_marlin-macros",
+  "black_marlin-tests/integration-tests"
 ]
 exclude = [
-  "sailfish-tests/fuzzing-tests",
+  "black_marlin-tests/fuzzing-tests",
   "examples"
 ]

@@ -1,5 +1,5 @@
 [package]
-name = "sailfish-examples"
+name = "black_marlin-examples"
 version = "0.3.3"
 authors = ["Ryohei Machida <orcinus4627@gmail.com>"]
 edition = "2018"
@@ -8,8 +8,8 @@ publish = false
 [dependencies]
 actix-web = { version = "2.0.0", default-features = false }
 actix-rt = "1.1.1"
-sailfish = { path = "../sailfish" }
-sailfish-macros = { path = "../sailfish-macros" }
+black_marlin = { path = "../black_marlin" }
+black_marlin-macros = { path = "../black_marlin-macros" }
 
 [[bin]]
 name = "simple"
